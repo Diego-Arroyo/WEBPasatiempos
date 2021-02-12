@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sesion</title>
+    <link rel="stylesheet" href="temas.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBsOZvXqVI7-VWdGAg-Ow8r3ALyhDyzCYA",
+    authDomain: "web-pasatiempos.firebaseapp.com",
+    projectId: "web-pasatiempos",
+    storageBucket: "web-pasatiempos.appspot.com",
+    messagingSenderId: "296603794965",
+    appId: "1:296603794965:web:6e708f1837f257f0b5181c",
+    measurementId: "G-3SN1DW9CSD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+<br>
+
+<body>
+    <center>
+    <h1>
+        <FONT SIZE=18>Sesión</FONT>
+    </h1>
+    </center>
+    <CENTER>
+        <button onclick="location.href='index.html'" >Sesión</button>
+        <button onclick="location.href='pasatiempos.html'" >Pasatiempos</button>
+    </CENTER>
+    <center>
+        <figure><img id="avatar" src="https://image.freepik.com/vector-gratis/icono-libro-configuracion_65141-51.jpg" alt="Avatar" style="width: 200px;"> </figure>
+    </center>
+    <b> <FONT SIZE=6>E-mail: </FONT></b>
+    <fieldset>
+        <p align="center">
+            <FONT SIZE=4> <output id="email" style="width: 15px; height: 7px;">diegoarroyo@hotmail.com</output> </p>
+        </FONT>
+    </fieldset>
+
+    <b><FONT SIZE=6> Nombre: </FONT> </b>
+    <fieldset>
+        <p align="center">
+            <FONT SIZE=5> <output id="nombre" style="width: 15px; height: 7px;">Diego Armando A. A.</output> </p>
+        </font>
+    </fieldset>
+    <br>
+    <br>
+    <footer>Copyright &copy; 2021 Diego Armando Arroyo Arriaga.</footer>
+</body>
+
+</html>

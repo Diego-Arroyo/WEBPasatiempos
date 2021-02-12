@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar</title>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="util.js"></script>
+    <link rel="stylesheet" href="temas.css">
+    <script type="module" src="footer.js"></script>
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+
+<button type="button" onclick="location.href='index.html'" >Sesión</button>
+<button onclick="location.href='pasatiempos.html'">Pasatiempos</button>
+<button id="guardap" type="submit">Guardar</button>
+<center>
+<form action="javascript:guarda()">
+    <header>
+        <br>
+        <herramientas-abc></herramientas-abc>
+        <h1 id="pasatiempo">Pasatiempo Nuevo</h1>
+
+    </header>
+    <p><input id="inpasatiempo" type="text" style="width: 500px;" placeholder="pasatiempo" required></p>
+    <foot></foot>
+</form>
+</center>
+    <script >
+        async function guarda() {
+        try {
+            if (id) {
+                await firestore.collection("PASATIEMPO").doc(id).set(leeModelo());
+            } else {
+                await firestore.collection("PASATIEMPO").add(leeModelo());
+            }
+            agrega();
+        } catch (e) {
+            procesaError(e);
+        }
+    }
+    </script>
+<footer>Copyright &copy; 2021 Diego Armando Arroyo Arriaga.</footer>
+    
+</body>
+
+</html>
